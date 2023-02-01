@@ -1,9 +1,7 @@
 ﻿using HotelListing.API.Contracts;
 using HotelListing.API.Models.Users;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace HotelListing.API.Controllers
 {
@@ -80,8 +78,8 @@ namespace HotelListing.API.Controllers
 
             return Ok(authResponse);
         }
-        
-        //Account/login
+
+        // POST: api/Account/refreshtoken
         [HttpPost]
         [Route("refreshtoken")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -89,7 +87,7 @@ namespace HotelListing.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> RefreshToken([FromBody] AuthResponseDto request)
         {
-            var authResponse = await _authManager.VerifyRefreshToken(request );
+            var authResponse = await _authManager.VerifyRefreshToken(request);
 
             if (authResponse == null)
             {
