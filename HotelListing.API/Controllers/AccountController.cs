@@ -10,10 +10,12 @@ namespace HotelListing.API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAuthManager _authManager;
+        private readonly ILogger<AccountController> _logger;
 
-        public AccountController(IAuthManager authManager)
+        public AccountController(IAuthManager authManager, ILogger<AccountController> logger)
         {
             this._authManager = authManager;
+            this._logger = logger;
         }
 
         // POST: api/Account/register
@@ -77,6 +79,7 @@ namespace HotelListing.API.Controllers
             }
 
             return Ok(authResponse);
+
         }
 
         // POST: api/Account/refreshtoken
