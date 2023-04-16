@@ -13,17 +13,17 @@ Any logged-in user can retrieve a list of information for existing hotels, or fo
 Administrators can add new listings, update existing listings, and delete listings as they wish. This goes for countries and hotels. Deleting a country also deletes any residing hotels.
 Any user, logged-in or not can register a new account. Admin users can create new admin accounts.
 
-## Technologies used
-- Framework: AsP.NET Core 7
-- IDE: Microsoft Visual Studio 2022
-- Languages: C#, with some JSON
-- Middleware and other programs: Postman (testing), Serilog and Seq (logging), CMD
-
 ## Behind-the-scenes features
 - Automatic logging of all HTTP requests, using Serilog and Seq
 - Data-transfer objects used to prevent overposting (REST best practices)
 - Entity Framework used to encapsulate actual data objects and enable data retrieval-based API responses
 - User and session information encoded into JSON Web Tokens, which refresh often to prevent unauthorized access
+
+## Technologies used
+- Framework: AsP.NET Core 7
+- IDE: Microsoft Visual Studio 2022
+- Languages: C#, with some JSON
+- Middleware and other programs: Postman (testing), Serilog and Seq (logging), CMD
 
 
 # My Goals, What I Learned, and What I Reinforced
