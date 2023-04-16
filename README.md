@@ -3,6 +3,8 @@ title: Hotel Listing API Developed using .NET 7
 # Summary
 This is a demo project—a coded-along copy of Trevoir William's identical project in his [.NET course on Udemy](https://www.udemy.com/course/ultimate-aspnet-5-web-api-development-guide/)
 
+last updated 15 Apr 2023
+
 
 # Description
 ## What the Project Does
@@ -12,10 +14,16 @@ Administrators can add new listings, update existing listings, and delete listin
 Any user, logged-in or not can register a new account. Admin users can create new admin accounts.
 
 ## Technologies used
-Framework: AsP.NET Core 7
-IDE: Microsoft Visual Studio 2022
-Languages: C#, with some JSON
-Middleware and other programs: Postman (testing), Serilog and Seq (logging), CMD
+- Framework: AsP.NET Core 7
+- IDE: Microsoft Visual Studio 2022
+- Languages: C#, with some JSON
+- Middleware and other programs: Postman (testing), Serilog and Seq (logging), CMD
+
+## Behind-the-scenes features
+- Automatic logging of all HTTP requests, using Serilog and Seq
+- Data-transfer objects used to prevent overposting (REST best practices)
+- Entity Framework used to encapsulate actual data objects and enable data retrieval-based API responses
+- User and session information encoded into JSON Web Tokens, which refresh often to prevent unauthorized access
 
 
 # My Goals, What I Learned, and What I Reinforced
